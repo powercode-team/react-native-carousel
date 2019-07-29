@@ -41,10 +41,9 @@ const items = [{
 
 class App extends Component {
 
-  renderItem = ({ index, title, subtitle }) =>
+  renderItem = ({ title, subtitle }) =>
     <CarouselCard
       title={title}
-      style={{ marginRight: index < items.length }}
       subtitle={subtitle}
     />
 
@@ -52,6 +51,7 @@ class App extends Component {
     return (
       <View style={styles.container}>
         <Carousel
+          itemWidth={350}
           items={items}
           renderItem={this.renderItem}
         />
